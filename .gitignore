@@ -285,3 +285,7 @@ win32/*.positions
 win32/ext
 win32/phpts.def
 win32/wsyslog.h
+
+# 看源码时忽略的文件
+CmakeLists.txt
+cmake-build-debug
