@@ -1,5 +1,3 @@
-[TOC]
-
 [原来的 readme](README-OLD.md)
 
 # 学习 PHP 源码加中文注释 #
@@ -7,6 +5,8 @@
 原始分支：[PHP-7.0.12](https://github.com/feistiny/php-src/tree/PHP-7.0.12)
 
 当前分支：[COMMENT-PHP-7.0.12](https://github.com/feistiny/php-src/tree/COMMENT-PHP-7.0.12)
+
+之所以用 PHP-7.0.12 分支, 因为是跟着《PHP7 内核剖析》这本书学习的，这样可以更快的对 PHP 的源码整体上有个大概了解，一旦入门了，后续其他的细节问题就可以自己分析了。
 
 如果您需要联系到我，可以给我<a href="mailto:liuzhanfei166@126.com?subject=你好，关于你的  COMMENT-PHP-7.0.12 我有一些问题想跟你探讨一下&body=" >发邮件</a>。
 
@@ -34,17 +34,14 @@ Clion，jetbrains 系列用熟了，学习其他语言很方便，很多实用�
 
 Clion 执行 Action: `Create CMakeLists.txt` ，默认选项就行。
 
-### 本地生成 ./configure ###
-
-```
-./buildconf --force
-```
-
 ### 本地生成 main/php_config.h ###
 
-因为`php_config.h` 里有很多根据本机环境生成的宏，还有很多 include 了系统的头文件，如果不生成，找不到头文件就无法跳转。
+因为`php_config.h` 里有很多根据本机环境生成的宏，还有很多 include 了系统的头文件，如果不生成，找不到头文件就无法跳转。
 
 ```
+# 本地生成的 ./configure
+./buildconf --force
+
 # 什么扩展都不用带
 ./configure --without-iconv
 
